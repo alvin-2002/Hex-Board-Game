@@ -145,10 +145,10 @@ body {
 
 @media screen and (max-width: 470px) {
     .hex {
-        width: 20px;
+        width: 25px;
         position: relative;
         /* box-sizing: border-box; */
-        height: calc(20px*1.1547); 
+        height: calc(25px*1.1547); 
         display: inline-block;
         font-size:initial;
         margin-right: -2px;
