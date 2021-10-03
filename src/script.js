@@ -53,7 +53,7 @@ function turnClick(square) {
             pturn = -1 * pturn;
         }
     }
-    human
+    //human
     if (pturn == -1){
         if (typeof board[row][col] == 'number'){
             turn(square.target.id, p2, row, col);

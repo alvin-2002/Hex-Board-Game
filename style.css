@@ -175,12 +175,12 @@ body {
 
 @media screen and (max-width: 582px) {
     :root {
-        --margin: 20px;
+        --margin: 14px;
     }
     .hex {
-        width: 35px;
-        height: calc(35px*1.1547); 
-        margin-bottom: calc(4px + 50px*-0.2885); 
+        width: 25px;
+        height: calc(25px*1.1547); 
+        margin-bottom: calc(4px + 45px*-0.2885); 
     }
 
     .inside {
