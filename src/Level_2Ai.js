@@ -6,7 +6,7 @@ class Level2AI extends Player{
         
     }
 
-    getMove(square) {
+    getMove() {
         let priorityQueue = [];
         let copy = [];
         let gameFun = new GameFunction();

@@ -8,8 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-
     <div class="container">
+        <h1>Currently only works for Human vs Human</h1>
         <div class="board">
             <div class="row">
                 <div class="hex top"><div class="inside" id="0"></div></div>
@@ -117,9 +117,56 @@
                 <div class="text"></div>
                 <div class="play-again"></div>
             </div>
-        <div>
-            <button id="startGame" onclick="startGame()">Start</button>
-        </div>
+            <div class="game-functions">
+                <div class="functions">
+                    <div class="box">
+                        <form action="">
+                            <input type="radio" name="player-1" id="humanPlayer" checked>
+                            <label for="humanPlayer">Human Player (R) </label>
+                            <hr>
+                            <input type="radio" name="player-1" id="computerPlayer">
+                            <label for="computerPlayer">Computer Player (R) </label>
+                        </form>
+                        <form action="" class="difficulty-level">
+                            <span>Difficulty :</span>
+                            <input type="radio" name="p1-level" id="1">
+                            <label for="1">1</label>
+                            <input type="radio" name="p1-level" id="2">
+                            <label for="2">2</label>
+                            <input type="radio" name="p1-level" id="3" checked>
+                            <label for="3">3</label>
+                        </form>
+                    </div>
+                    <div class="box">
+                        <form action="">
+                            <input type="radio" name="player-2" id="humanPlayer" checked>
+                            <label for="humanPlayer">Human Player (B) </label>
+                            <hr>
+                            <input type="radio" name="player-2" id="computerPlayer">
+                            <label for="computerPlayer">Computer Player (B) </label>
+                        </form>
+                        <form action="" class="difficulty-level">
+                            <span>Difficulty :</span>
+                            <input type="radio" name="p2-level" id="1">
+                            <label for="1">1</label>
+                            <input type="radio" name="p2-level" id="2">
+                            <label for="2">2</label>
+                            <input type="radio" name="p2-level" id="3" checked>
+                            <label for="3">3</label>
+                        </form>
+                    </div>
+    
+                    <div class="btn">
+                        <div class="box start-quit-btn">
+                            <button id="startGame" onclick="startGame()">Start</button>
+                        </div>
+                        <div class="box start-quit-btn quit-btn">
+                            <button onClick="window.location.reload()">Quit</button>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
     </div>
     
     <script src="src/Cell.js"></script>
@@ -127,6 +174,7 @@
     <script src="src/Human.js"></script>
     <script src="src/Level_1Ai.js"></script>
     <script src="src/Level_2Ai.js"></script>
+    <script src="src/Level_3Ai.js"></script>
     <script src="src/script.js"></script>
     <script src="src/gamefunction.js"></script>
 </body>

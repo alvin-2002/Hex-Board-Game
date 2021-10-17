@@ -1,14 +1,15 @@
 
-
 class GameFunction {
 
     turn(squareId, p, row, col) {
+        
         board[row][col] = p.character;
         hBoard[squareId] = p.character;
         storeCells(squareId);
         let colorClass = document.createElement("div");
         colorClass.setAttribute("class", p.color);
         document.getElementById(squareId).appendChild(colorClass);
+        console.log("turb");
         let gameDecision = this.checkWin(board, p);
         if (gameDecision != 0) {
             this.updatePlayerWin(gameDecision);
