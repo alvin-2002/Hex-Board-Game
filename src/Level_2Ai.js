@@ -6,7 +6,7 @@ class Level2AI extends Player{
         
     }
 
-    async getMove() {
+    getMove() {
         let priorityQueue = [];
         let copy = [];
         let gameFun = new GameFunction();
@@ -19,7 +19,6 @@ class Level2AI extends Player{
                     c.row = i;
                     c.col = j;
                     c.heuristic = gameFun.heuristics(this.player,i ,j, b);
-                    // console.log("heuristic " ,gameFun.heuristics(this.player,i ,j, b))
                     priorityQueue.push(c);
                 }
             }
@@ -39,7 +38,9 @@ class Level2AI extends Player{
             let col = getCell.col;
             let value = calculateIndex(row, col);
             if (typeof board[row][col] == 'number'){
-                gameFun.turn(value, this.player, row, col);
+                // gameFun.turn(value, this.player, row, col);
+                gameFun.turn(value, row, col);
+                pturn = pturn * -1;
                 return true;
             }
         } else {

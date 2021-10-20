@@ -1,29 +1,18 @@
 
 class GameFunction {
 
-    turn(squareId, p, row, col) {
-        
+    turn(squareId, row, col) {
+    
+        // check player's color
+        let p = (p1.pturn == pturn) ? p1 : p2;
+         
         board[row][col] = p.character;
         hBoard[squareId] = p.character;
         storeCells(squareId);
-       
-        // if (p.playerType == 'Computer') {
-        //     return new Promise((resolve) => {
-        //         setTimeout(() => {
-        //             let colorClass = document.createElement("div");
-        //             colorClass.setAttribute("class", p.color);
-        //             document.getElementById(squareId).appendChild(colorClass);
-        //         }, 800);
-        //         setTimeout(resolve, 800);
-        //     });
-        // }
-        // else {
-            let colorClass = document.createElement("div");
-            colorClass.setAttribute("class", p.color);
-            document.getElementById(squareId).appendChild(colorClass);
-        // }
-
-      
+        let colorClass = document.createElement("div");
+        colorClass.setAttribute("class", p.color);
+        document.getElementById(squareId).appendChild(colorClass);
+        
         let gameDecision = this.checkWin(board, p);
         if (gameDecision != 0) {
             this.updatePlayerWin(gameDecision);

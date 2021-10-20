@@ -5,17 +5,16 @@ class Level1AI extends Player{
         this.player = player;
     }
     
-    async getMove() {
-        console.log("dfsd");
+    getMove() {
         let gameFunction = new GameFunction();
         let emptyCell = hBoard.filter(s => typeof s == 'number'); 
         let index = this.randomizeMove(emptyCell);
         let value = emptyCell[index];
         let row = gameFunction.calculateRowAndCol(value).row;
         let col = gameFunction.calculateRowAndCol(value).col;
-        console.log(this.player)
         if (typeof board[row][col] == 'number'){
-            gameFunction.turn(value, this.player, row, col);
+            gameFunction.turn(value, row, col);
+            pturn = pturn * -1;
             return true;
         }
     }
