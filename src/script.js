@@ -2,7 +2,6 @@ const displayWin = document.querySelector('.endgame');
 const cells = document.querySelectorAll('.inside');
 const allButtons = document.querySelectorAll('input[type=radio]');
 
-
 let boardSize = 9;
 let board; 
 let pturn;

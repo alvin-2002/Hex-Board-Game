@@ -8,8 +8,17 @@
     <title>Document</title>
 </head>
 <body>
+ 
     <div class="container">
-        <h1>Working on Minmax level 3 AI</h1>
+        <div class="rules">
+            <ol>
+                <li>Players choose a colour and take turns. On each turn one counter is placed in an empty hexagonal cell.</li>
+                <li>The first player to form a connected path of their counters linking the opposing sides of the board marked by their colour wins..</li>
+                <li>The four corner hexagons belong to both adjacent sides.</li>
+            </ol>
+        </div>
+        <h1>Working on Minmax level 3 AI </h1>
+        
         <div class="board">
             <div class="row">
                 <div class="hex top"><div class="inside" id="0" onClick="click(this.id)"></div></div>
