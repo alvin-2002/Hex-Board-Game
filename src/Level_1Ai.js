@@ -5,7 +5,7 @@ class Level1AI extends Player{
         this.player = player;
     }
     
-    getMove(square) {
+    async getMove() {
         console.log("dfsd");
         let gameFunction = new GameFunction();
         let emptyCell = hBoard.filter(s => typeof s == 'number'); 

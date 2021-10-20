@@ -6,7 +6,7 @@ class Level2AI extends Player{
         
     }
 
-    getMove() {
+    async getMove() {
         let priorityQueue = [];
         let copy = [];
         let gameFun = new GameFunction();
@@ -19,7 +19,7 @@ class Level2AI extends Player{
                     c.row = i;
                     c.col = j;
                     c.heuristic = gameFun.heuristics(this.player,i ,j, b);
-                    console.log("heuristic " ,gameFun.heuristics(this.player,i ,j, b))
+                    // console.log("heuristic " ,gameFun.heuristics(this.player,i ,j, b))
                     priorityQueue.push(c);
                 }
             }

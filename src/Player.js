@@ -1,6 +1,6 @@
 class Player{
 
-    getMove(square) {
+    async getMove() {
 
     }
     randomizeMove(arr){
